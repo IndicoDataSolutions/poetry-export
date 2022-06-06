@@ -7,13 +7,13 @@ packages = [ {include = "test_export"}]
 
 [tool.poetry.dependencies]
 python = "~3.10"
-requests = "*"
+mock_git_dep = {git = "https://github.com/IndicoDataSolutions/poetry-install-from.git", branch="main"}
 
 [tool.poetry.group.test]
 optional = true
 
 [tool.poetry.group.test.dependencies]
-pytest = "*"
+mock_git_dep = {git = "https://github.com/IndicoDataSolutions/poetry-install-from.git", branch="main", extras=["test"]}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
